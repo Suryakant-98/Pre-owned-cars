@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <script>
+        function generateCertificate()
+        {
+            var doc = new jsPDF()
+            var carNum =  "Car Number : " + document.getElementById("carNum").value;
+            doc.text(carNum, 10, 10)
+            var carModel =  "Car Model : " + document.getElementById("carModel").value;
+            doc.text(carModel, 10, 20)
+            var insurance =  "Insurance Number : " + document.getElementById("insurance").value;
+            doc.text(insurance, 10, 30)
+            var name =  "Name : " + document.getElementById("name").value;
+            doc.text(name, 10, 40)
+            var phone =  "Phone Number : " + document.getElementById("phone").value;
+            doc.text(phone, 10, 50)
+            var emailId =  "Email Id : " + document.getElementById("emailId").value;
+            doc.text(emailId, 10, 60)
+            doc.save('certificate.pdf')
+            return false;
+        }
+    </script>
+    <body>
+        <div class="container">
+            <h1>Seller Details</h1>
+            <form onsubmit="return generateCertificate()">
+                <div class="form-group">
+                <label for="carNum">Car Number: </label>
+                <input type="text" class="form-control" id="carNum" placeholder="Enter Car Number" name="carNum">
+                </div>
+                <div class="form-group">
+                <label for="carModel">Car Model: </label>
+                <input type="text" class="form-control" id="carModel" placeholder="Enter Car Model" name="carModel">
+                </div>
+                <div class="form-group">
+                    <label for="insurance">Insurance Number: </label>
+                    <input type="text" class="form-control" id="insurance" placeholder="Enter Insurance Number" name="insurance">
+                </div>
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number: </label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Enter Phone Number" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="emailId">Email Id: </label>
+                    <input type="email" class="form-control" id="emailId" placeholder="Enter Email Id" name="emailId">
+                </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
