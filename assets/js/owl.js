@@ -1,84 +1,34 @@
-/**
- * Owl Carousel v2.3.4
- * Copyright 2013-2018 David Deutsch
- * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
- */
-/**
- * Owl carousel
- * @version 2.3.4
- * @author Bartosz Wojciechowski
- * @author David Deutsch
- * @license The MIT License (MIT)
- * @todo Lazy Load Icon
- * @todo prevent animationend bubling
- * @todo itemsScaleUp
- * @todo Test Zepto
- * @todo stagePadding calculate wrong active classes
- */
+
 ;(function($, window, document, undefined) {
 
-	/**
-	 * Creates a carousel.
-	 * @class The Owl Carousel.
-	 * @public
-	 * @param {HTMLElement|jQuery} element - The element to create the carousel for.
-	 * @param {Object} [options] - The options
-	 */
+	
 	function Owl(element, options) {
 
-		/**
-		 * Current settings for the carousel.
-		 * @public
-		 */
+		
 		this.settings = null;
 
-		/**
-		 * Current options set by the caller including defaults.
-		 * @public
-		 */
+		
 		this.options = $.extend({}, Owl.Defaults, options);
 
-		/**
-		 * Plugin element.
-		 * @public
-		 */
+		
 		this.$element = $(element);
 
-		/**
-		 * Proxied event handlers.
-		 * @protected
-		 */
+		
 		this._handlers = {};
 
-		/**
-		 * References to the running plugins of this carousel.
-		 * @protected
-		 */
+		
 		this._plugins = {};
 
-		/**
-		 * Currently suppressed events to prevent them from being retriggered.
-		 * @protected
-		 */
+		
 		this._supress = {};
 
-		/**
-		 * Absolute current position.
-		 * @protected
-		 */
+		
 		this._current = null;
 
-		/**
-		 * Animation speed in milliseconds.
-		 * @protected
-		 */
+		
 		this._speed = null;
 
-		/**
-		 * Coordinates of all items in pixel.
-		 * @todo The name of this member is missleading.
-		 * @protected
-		 */
+		
 		this._coordinates = [];
 
 		/**
@@ -723,12 +673,7 @@
 		this.trigger('resized');
 	};
 
-	/**
-	 * Registers event handlers.
-	 * @todo Check `msPointerEnabled`
-	 * @todo #261
-	 * @protected
-	 */
+	
 	Owl.prototype.registerEventHandlers = function() {
 		if ($.support.transition) {
 			this.$stage.on($.support.transition.end + '.owl.core', $.proxy(this.onTransitionEnd, this));
@@ -750,13 +695,7 @@
 		}
 	};
 
-	/**
-	 * Handles `touchstart` and `mousedown` events.
-	 * @todo Horizontal swipe threshold as option
-	 * @todo #261
-	 * @protected
-	 * @param {Event} event - The event arguments.
-	 */
+	
 	Owl.prototype.onDragStart = function(event) {
 		var stage = null;
 
@@ -813,12 +752,7 @@
 		}, this));
 	};
 
-	/**
-	 * Handles the `touchmove` and `mousemove` events.
-	 * @todo #261
-	 * @protected
-	 * @param {Event} event - The event arguments.
-	 */
+	
 	Owl.prototype.onDragMove = function(event) {
 		var minimum = null,
 			maximum = null,
@@ -848,13 +782,7 @@
 		this.animate(stage.x);
 	};
 
-	/**
-	 * Handles the `touchend` and `mouseup` events.
-	 * @todo #261
-	 * @todo Threshold for click event
-	 * @protected
-	 * @param {Event} event - The event arguments.
-	 */
+	
 	Owl.prototype.onDragEnd = function(event) {
 		var delta = this.difference(this._drag.pointer, this.pointer(event)),
 			stage = this._drag.stage.current,
@@ -2016,13 +1944,7 @@
 
 })(window.Zepto || window.jQuery, window, document);
 
-/**
- * AutoHeight Plugin
- * @version 2.3.4
- * @author Bartosz Wojciechowski
- * @author David Deutsch
- * @license The MIT License (MIT)
- */
+
 ;(function($, window, document, undefined) {
 
 	/**
@@ -2477,13 +2399,7 @@
 
 })(window.Zepto || window.jQuery, window, document);
 
-/**
- * Animate Plugin
- * @version 2.3.4
- * @author Bartosz Wojciechowski
- * @author David Deutsch
- * @license The MIT License (MIT)
- */
+
 ;(function($, window, document, undefined) {
 
 	/**
@@ -2599,15 +2515,7 @@
 
 })(window.Zepto || window.jQuery, window, document);
 
-/**
- * Autoplay Plugin
- * @version 2.3.4
- * @author Bartosz Wojciechowski
- * @author Artus Kolanowski
- * @author David Deutsch
- * @author Tom De Caluwé
- * @license The MIT License (MIT)
- */
+
 ;(function($, window, document, undefined) {
 
 	/**
@@ -2833,13 +2741,7 @@
 
 })(window.Zepto || window.jQuery, window, document);
 
-/**
- * Navigation Plugin
- * @version 2.3.4
- * @author Artus Kolanowski
- * @author David Deutsch
- * @license The MIT License (MIT)
- */
+
 ;(function($, window, document, undefined) {
 	'use strict';
 
@@ -3240,13 +3142,7 @@
 
 })(window.Zepto || window.jQuery, window, document);
 
-/**
- * Hash Plugin
- * @version 2.3.4
- * @author Artus Kolanowski
- * @author David Deutsch
- * @license The MIT License (MIT)
- */
+
 ;(function($, window, document, undefined) {
 	'use strict';
 
@@ -3363,15 +3259,7 @@
 
 })(window.Zepto || window.jQuery, window, document);
 
-/**
- * Support Plugin
- *
- * @version 2.3.4
- * @author Vivid Planet Software GmbH
- * @author Artus Kolanowski
- * @author David Deutsch
- * @license The MIT License (MIT)
- */
+
 ;(function($, window, document, undefined) {
 
 	var style = $('<support>').get(0).style,
