@@ -327,7 +327,7 @@ header .navbar {
 
 
 
-/* Banner Style */
+
 
 .img-fill{
   width: 100%;
@@ -524,7 +524,7 @@ ul.slick-dots {
 
 
 
-/* Request Form */
+
 
 .request-form {
 	background-color: #a4c639;
@@ -552,7 +552,7 @@ ul.slick-dots {
 
 
 
-/* Services */
+
 
 .services {
 	margin-top: 140px;
@@ -733,7 +733,7 @@ ul.slick-dots {
 }
 
 
-/* Testimonials Style */
+
 
 .about-testimonials {
 	margin-top: 0px!important;
@@ -777,7 +777,7 @@ ul.slick-dots {
 
 
 
-/* Call Back Style */
+
 
 .callback-services {
 	border-top: 1px solid #eee;
@@ -902,7 +902,7 @@ ul.slick-dots {
 
 
 
-/* Partners Style */
+
 
 .contact-partners {
 	margin-top: -8px!important;
@@ -926,7 +926,7 @@ ul.slick-dots {
 
 
 
-/* Footer Style */
+
 
 footer {
 	background-color: #232323;
@@ -1250,7 +1250,7 @@ footer .contact-form button.filled-button:hover {
 	background-color: #a4c639;
 }
 
-/* Contact Information */
+
 
 .contact-information {
 	margin-top: 140px;
@@ -1288,7 +1288,7 @@ footer .contact-form button.filled-button:hover {
 
 
 
-/* Responsive Style */
+
 @media (max-width: 768px) {
 	.sub-header {
 		display: none;
