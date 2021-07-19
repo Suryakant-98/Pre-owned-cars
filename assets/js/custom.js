@@ -66,7 +66,7 @@ jQuery( document ).ready(function( $ ) {
         dots:true,
         pauseOnDotsHover:true,
         cssEase:'linear',
-       // fade:true,
+       
         draggable:false,
         prevArrow:'<button class="PrevArrow"></button>',
         nextArrow:'<button class="NextArrow"></button>', 
